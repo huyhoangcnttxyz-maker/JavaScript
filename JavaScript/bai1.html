@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính lãi suất ngân hàng</title>
+  </head>
+  <body>
+    <script>
+      let soTienVay = 50;
+      let laiSuat = 8;
+      let n = 2;
+
+      let tienLaiHangNam = soTienVay * (laiSuat / 100);
+
+      let tongSoTien = soTienVay + n * tienLaiHangNam;
+
+      document.write("Số tiền vay: " + soTienVay + " triệu đồng<br>");
+      document.write("Lãi suất: " + laiSuat + "%/năm<br>");
+      document.write("Số năm: " + n + " năm<br>");
+      document.write(
+        "Số tiền lãi mỗi năm: " + tienLaiHangNam + " triệu đồng<br>",
+      );
+      document.write(
+        "Tổng số tiền phải trả sau " +
+          n +
+          " năm: " +
+          tongSoTien +
+          " triệu đồng",
+      );
+    </script>
+  </body>
+</html>

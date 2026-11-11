@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tra cứu giá hoa quả</title>
+  </head>
+  <body>
+    <h2>Giá hoa quả</h2>
+    <input type="text" id="ten_hoa_qua" placeholder="Nhập tên hoa quả..." />
+    <button onclick="traCuuGia()">Xem giá</button>
+    <p id="ketQuaGia"></p>
+
+    <script>
+      function traCuuGia() {
+        let tenHoaQua = document
+          .getElementById("ten_hoa_qua")
+          .value.trim()
+          .toLowerCase();
+        let giaTien = "";
+
+        switch (tenHoaQua) {
+          case "ổi":
+            giaTien = "20000 VND/kg";
+            break;
+          case "dưa hấu":
+            giaTien = "20000 VND/kg";
+            break;
+          case "táo":
+            giaTien = "30000 VND/kg";
+            break;
+          case "cam":
+            giaTien = "40000 VND/kg";
+            break;
+          case "chôm chôm":
+            giaTien = "40000 VND/kg";
+            break;
+          case "măng cụt":
+            giaTien = "50000 VND/kg";
+            break;
+          default:
+            giaTien = "Tìm không thấy";
+            break;
+        }
+
+        document.getElementById("ketQuaGia").innerText = giaTien;
+      }
+    </script>
+  </body>
+</html>
